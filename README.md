@@ -1,1 +1,0 @@
-# smansatas-2
