@@ -90,11 +90,22 @@ h1 {
 }
 
 /* Warna latar header */
+/* Hapus atau ubah aturan .org-table th sebelumnya,
+   lalu ganti dengan: */
+
 .org-table th {
   background-color: #000 !important;  /* hitam */
   color: #fff !important;             /* teks putih */
   font-weight: 600;
 }
+
+/* Jika kamu tetap ingin menggunakan kelas Bootstrap table-dark,
+   tambahkan aturan berikut agar tidak tertimpa: */
+.table-dark th {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
 
 /* Gaya gambar logo */
 .org-table img {
