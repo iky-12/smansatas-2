@@ -45,18 +45,101 @@
       </div>
     </nav>
     <style>
-        .center-table {
-            width: 80%;
-            margin: 0 auto;
-            border: 1px solid black;
-        }
-        table tr td{
-        text-align:center;
-        vertical-align:middle;
-        }
-        th td{
-            padding:100px;
-        }
+       /* style.css */
+
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body & judul */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+/* Wrapper agar tabel bisa di-scroll */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;       /* Memungkinkan scroll horizontal */
+  -webkit-overflow-scrolling: touch; /* Untuk kelancaran di iOS */
+}
+
+/* Tabel utama */
+.org-table {
+  width: 100%;
+  max-width: 100%;         /* Mencegah tabel melebar melewati container */
+  border-collapse: collapse;
+  background-color: #fff;
+  margin: 0 auto 20px;     /* Center dan beri jarak bawah */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  min-width: 600px;        /* Batas lebar minimum agar kolom tidak terlalu sempit. */
+}
+
+/* Header dan sel */
+.org-table th,
+.org-table td {
+  border: 1px solid #ccc;
+  padding: 12px 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Warna latar header */
+.org-table th {
+  background-color: #ececec;
+  font-weight: 600;
+}
+
+/* Gaya gambar logo */
+.org-table img {
+  width: 80px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ------------------------------------------------------
+   MEDIA QUERIES untuk tampilan pada layar sempit (< 768px)
+   ------------------------------------------------------ */
+@media screen and (max-width: 768px) {
+  .org-table {
+    min-width: 500px;        /* Masih pakai min-width kecil agar scroll muncul */
+  }
+  .org-table th,
+  .org-table td {
+    padding: 10px 6px;       /* Kurangi padding agar lebih pas di layar kecil */
+    font-size: 14px;         /* Kurangi ukuran font sedikit */
+  }
+  .org-table img {
+    width: 60px;             /* Kurangi ukuran logo */
+  }
+}
+
+/* ------------------------------------------------------
+   MEDIA QUERIES untuk layar sangat sempit (< 480px)
+   ------------------------------------------------------ */
+@media screen and (max-width: 480px) {
+  .org-table {
+    min-width: 400px;        /* Biarkan tabel paling sempit 400px */
+  }
+  .org-table th,
+  .org-table td {
+    padding: 8px 4px;
+    font-size: 12px;
+  }
+  .org-table img {
+    width: 50px;
+  }
+}
+
     </style>
     <div class="row text-center align-items-center mt-4" data-aos="fade-up">
         <h1 data-aos="fade-right">DAFTAR NAMA ORGANISASI SMA NEGERI 1 TASIKMALAYA</h1>
