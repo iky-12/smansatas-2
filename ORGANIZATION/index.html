@@ -45,9 +45,7 @@
       </div>
     </nav>
     <style>
-       /* style.css */
-
-/* Reset dasar */
+  /* Reset dasar */
 * {
   margin: 0;
   padding: 0;
@@ -69,19 +67,17 @@ h1 {
 /* Wrapper agar tabel bisa di-scroll */
 .table-responsive {
   width: 100%;
-  overflow-x: auto;       /* Memungkinkan scroll horizontal */
-  -webkit-overflow-scrolling: touch; /* Untuk kelancaran di iOS */
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Tabel utama */
 .org-table {
   width: 100%;
-  max-width: 100%;         /* Mencegah tabel melebar melewati container */
   border-collapse: collapse;
   background-color: #fff;
-  margin: 0 auto 20px;     /* Center dan beri jarak bawah */
+  margin: 0 auto 20px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  min-width: 600px;        /* Batas lebar minimum agar kolom tidak terlalu sempit. */
 }
 
 /* Header dan sel */
@@ -106,30 +102,25 @@ h1 {
   object-fit: contain;
 }
 
-/* ------------------------------------------------------
-   MEDIA QUERIES untuk tampilan pada layar sempit (< 768px)
-   ------------------------------------------------------ */
+/* Buat jarak bawah pada container */
+.container-fluid {
+  padding-bottom: 20px;
+}
+
+/* MEDIA QUERIES untuk tampilan pada layar sempit (< 768px) */
 @media screen and (max-width: 768px) {
-  .org-table {
-    min-width: 500px;        /* Masih pakai min-width kecil agar scroll muncul */
-  }
   .org-table th,
   .org-table td {
-    padding: 10px 6px;       /* Kurangi padding agar lebih pas di layar kecil */
-    font-size: 14px;         /* Kurangi ukuran font sedikit */
+    padding: 10px 6px;
+    font-size: 14px;
   }
   .org-table img {
-    width: 60px;             /* Kurangi ukuran logo */
+    width: 60px;
   }
 }
 
-/* ------------------------------------------------------
-   MEDIA QUERIES untuk layar sangat sempit (< 480px)
-   ------------------------------------------------------ */
+/* MEDIA QUERIES untuk layar sangat sempit (< 480px) */
 @media screen and (max-width: 480px) {
-  .org-table {
-    min-width: 400px;        /* Biarkan tabel paling sempit 400px */
-  }
   .org-table th,
   .org-table td {
     padding: 8px 4px;
@@ -141,121 +132,118 @@ h1 {
 }
 
     </style>
-    <div class="row text-center align-items-center mt-4" data-aos="fade-up">
-        <h1 data-aos="fade-right">DAFTAR NAMA ORGANISASI SMA NEGERI 1 TASIKMALAYA</h1>
-        <P> berikut adalah nama nama organisasi di sman 1 tasikmalaya</P>
-        <table class="table navbar-center center-table" data-aos="fade-up">
-            <thead class="table-dark"data-aos="fade-up">
-                <tr>
-                    <th scope="col">No</th>
-                    <th scope="col">logo</th>
-                    <th scope="col">ketua</th>
-                    <th scope="col">Name</th>
-                </tr>
-            </thead>
-            <tbody data-aos="fade-up">
-               <tr>
-                 <th scope="row">1</th>
-                    <td><img src="assets/pk.png" width="100" height="50"alt="pk"></td>
-                    <td>Faiz naufal Firdaus</td>
-                    <td>Perwakilan Kelas</td>
-                    </tr>
-                    <tr>
-                     <th scope="row">2</th>
-                      <td><img src="assets/osis.jpeg" width="100" height="50"  alt="osis"></td>
-                      <td>Najril apriza firmansyah</td>
-                      <td>Osis</td>
-                      </tr>
-                      <tr>
-                     <th scope="row">3</th>
-                        <td><img src="assets/sklnb.jpg" width="100" height="50" alt="sklnb"></td>
-                        <td>M.Alfibian Ghifari</td>
-                        <td>Sklnb </td>
-                        </tr>
-                    <tr>
-                      <th scope="row">4</th>
-                    <td><img src="assets/ssg.png"width="100" height="50"  alt="ssg"></td>
-                    <td>Muhamad Naufal Hanif<td>
-                    <td>sangar seni gerentes</td>
-                    </tr>
-                    <tr>
-                    <th scope="row">5</th>
-                    <td><img src="assets/passatas.jpg" width="100" height="50"  alt="passatas"></td>
-                    <td>Muhamad Daffa Aprilia<td>
-                    <td>Paskibra</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">6</th>
-                    <td><img src="assets/gema.jpg"  width="100" height="50"  alt="gema"></td>
-                    <td>Bagas Mohga Firjatullah<td>
-                    <td>Gema Babusalam</td>
-                    </tr>
-                    <tr>
-                    <th scope="row">7</th>
-                    <td><img src="assets/PHIPETALA.jpg"  width="100" height="50" alt="phipetala"></td>
-                    <td>Farras Muhammad Prayata Yanwarsyah<td>
-                    <td>Phipethala</td>
-                    </tr>
-                    <tr>
-                 <th scope="row">8</th>
-                    <td><img src="assets/konasis.jpg"width="100" height="50" alt="konansis"></td>
-                    <td>fuji ferdiansyah<td>
-                    <td>Koperasi Bina Siswa</td>
-                    </tr>
-                    <tr>
-                    <th scope="row">9</th>
-                    <td><img src="assets/EDS.JPG"width="100" height="50" alt="EDS" ></td>
-                    <td>Dian Andika Pagestu
-                    <td>Esperanto de satas</td>
-                    </tr>
-                    <tr>
-                  <th scope="row">10</th>
-                    <td><img src="assets/napel.jpg"width="100" height="50"alt="napel" ></td>
-                    <td>Elmira Ishra Fariza<td>
-                    <td>buana pelajar</td>
-                    </tr>
-                    <tr>
-                   <th scope="row">11</th>
-                    <td><img src="assets/pks.png"width="100" height="50" alt="pks"></td>
-                    <td>Jelita Ely Fitri Sinaga<td>
-                    <td>patroli keamanan sekolah</td>
-                    </tr>
-                    <tr>
-                     <th scope="row">12</th>
-                    <td><img src="assets/logo fiks micro.png"width="100" height="50"  alt="micro"></td>
-                    <td>Darin Ayu Surya Faazani<td>
-                    <td>Micro</td>
-                    </tr>
-                    <tr>
-               <th scope="row">13</th>
-                    <td><img src="assets/pik r.jpg" width="100" height="50"  alt="pik r" ></td>
-                    <td>Nailah Ramadhani Shabirah<Td>
-                    <td>Pik r</td>
-                    </tr>
-                    <tr>
-                 <th scope="row">14</th>
-                    <td><img src="assets/taksis.png"class="img fluid" width="80"  alt="taksis" ></td>
-                    <td>Nadhira Nurul Ulfah<td>
-                    <td>Taman Kajian Siswa</td>
-                    </tr>
-                    <tr>
-                    <th scope="row">15</th>
-                    <td><img src="assets/logo pmr.jpg"width="100" height="50"alt="pmr" ></td>
-                    <td>Derbi Malik Mulki Ariyadi Putra<td>
-                    <td>PMR</td>
-                    </tr>
-                    <tr>
-                   <th scope="row">16</th>
-                    <td><img src="assets/Logo sampurasun.png" width="100" height="50" alt="sampurasun"></td>
-                    <td>Najril apriza firmansyah<td>
-                    <td>sampurasun</td>
-                    </tr>
-          </tbody>
-        </table>
-        </div>
-          </tbody>
-        </table>
-        </div>
+  <!-- Awali atau gantikan bagian tabel Anda dengan: -->
+<div class="table-responsive mt-3" data-aos="fade-up">
+  <table class="table table-bordered table-striped org-table">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">No</th>
+        <th scope="col">Logo</th>
+        <th scope="col">Ketua</th>
+        <th scope="col">Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td><img src="assets/pk.png" width="100" height="50" alt="pk"></td>
+        <td>Faiz naufal Firdaus</td>
+        <td>Perwakilan Kelas</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td><img src="assets/osis.jpeg" width="100" height="50" alt="osis"></td>
+        <td>Najril apriza firmansyah</td>
+        <td>Osis</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td><img src="assets/sklnb.jpg" width="100" height="50" alt="sklnb"></td>
+        <td>M.Alfibian Ghifari</td>
+        <td>Sklnb</td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td><img src="assets/ssg.png" width="100" height="50" alt="ssg"></td>
+        <td>Muhamad Naufal Hanif</td>
+        <td>Sanggar Seni Gerentes</td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td><img src="assets/passatas.jpg" width="100" height="50" alt="passatas"></td>
+        <td>Muhamad Daffa Aprilia</td>
+        <td>Paskibra</td>
+      </tr>
+      <tr>
+        <th scope="row">6</th>
+        <td><img src="assets/gema.jpg" width="100" height="50" alt="gema"></td>
+        <td>Bagas Mohga Firjatullah</td>
+        <td>Gema Babusalam</td>
+      </tr>
+      <tr>
+        <th scope="row">7</th>
+        <td><img src="assets/PHIPETALA.jpg" width="100" height="50" alt="phipetala"></td>
+        <td>Farras Muhammad Prayata Yanwarsyah</td>
+        <td>Phipetala</td>
+      </tr>
+      <tr>
+        <th scope="row">8</th>
+        <td><img src="assets/konasis.jpg" width="100" height="50" alt="konasis"></td>
+        <td>Fuji Ferdiansyah</td>
+        <td>Koperasi Bina Siswa</td>
+      </tr>
+      <tr>
+        <th scope="row">9</th>
+        <td><img src="assets/EDS.JPG" width="100" height="50" alt="EDS"></td>
+        <td>Dian Andika Pagestu</td>
+        <td>Esperanto de Satas</td>
+      </tr>
+      <tr>
+        <th scope="row">10</th>
+        <td><img src="assets/napel.jpg" width="100" height="50" alt="napel"></td>
+        <td>Elmira Ishra Fariza</td>
+        <td>Buana Pelajar</td>
+      </tr>
+      <tr>
+        <th scope="row">11</th>
+        <td><img src="assets/pks.png" width="100" height="50" alt="pks"></td>
+        <td>Jelita Ely Fitri Sinaga</td>
+        <td>Patroli Keamanan Sekolah</td>
+      </tr>
+      <tr>
+        <th scope="row">12</th>
+        <td><img src="assets/logo fiks micro.png" width="100" height="50" alt="micro"></td>
+        <td>Darin Ayu Surya Faazani</td>
+        <td>Micro</td>
+      </tr>
+      <tr>
+        <th scope="row">13</th>
+        <td><img src="assets/pik r.jpg" width="100" height="50" alt="pik r"></td>
+        <td>Nailah Ramadhani Shabirah</td>
+        <td>Pik R</td>
+      </tr>
+      <tr>
+        <th scope="row">14</th>
+        <td><img src="assets/taksis.png" class="img-fluid" width="80" alt="taksis"></td>
+        <td>Nadhira Nurul Ulfah</td>
+        <td>Taman Kajian Siswa</td>
+      </tr>
+      <tr>
+        <th scope="row">15</th>
+        <td><img src="assets/logo pmr.jpg" width="100" height="50" alt="pmr"></td>
+        <td>Derbi Malik Mulki Ariyadi Putra</td>
+        <td>PMR</td>
+      </tr>
+      <tr>
+        <th scope="row">16</th>
+        <td><img src="assets/Logo sampurasun.png" width="100" height="50" alt="sampurasun"></td>
+        <td>Najril apriza firmansyah</td>
+        <td>Sampurasun</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
   crossorigin="anonymous"></script>
