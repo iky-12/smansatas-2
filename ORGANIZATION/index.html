@@ -1,292 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <base href="/smansatas-2/">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ORGANIZATION</title>
-</head>
-<body  data-aos="fade-up">
-  <div class="container-fluid text-dark" style="height: 100vh">
-    <!-- nav section start -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-light sticky-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">SMAN 1 TASIKMALAYA  <img src="assets/Logo_SMAN_1_Tasikmalaya.png" width="30" height="30" alt="Logo SMAN 1 Tasikmalaya"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="History/index.html">HISTORY</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                OTHERS
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="TEACHER/index.html">TEACHER </a></li>
-                <li><a class="dropdown-item" href="INFRASTRUCTURE/index.html">INFRASTRUCTURE</a></li>
-                <li><a class="dropdown-item" href="ORGANIZATION/index.html">ORGANIZATION</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <style>
-  /* Reset dasar */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Sesuaikan base href jika dihosting di subfolder, atau hapus jika tidak perlu -->
+  <!-- <base href="/smansatas-2/"> -->
 
-/* Body & judul */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  text-align: center;
-  padding: 20px;
-}
+  <style>
+    /* Reset dasar */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-h1 {
-  margin-bottom: 30px;
-}
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
 
-/* Wrapper agar tabel bisa di-scroll */
-.table-responsive {
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
+    /* Navbar custom spacing */
+    .navbar-brand img {
+      margin-left: 8px;
+    }
 
-/* Tabel utama */
-.org-table {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: #fff;
-  margin: 0 auto 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
+    /* Wrapper agar tabel bisa di-scroll */
+    .table-responsive {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding: 20px 0;
+    }
 
-/* Header dan sel */
-.org-table th,
-.org-table td {
-  border: 1px solid #ccc;
-  padding: 12px 10px;
-  text-align: center;
-  vertical-align: middle;
-}
+    /* Styling tabel organisasi */
+    .org-table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
-/* Warna latar header */
-/* Hapus atau ubah aturan .org-table th sebelumnya,
-   lalu ganti dengan: */
+    .org-table th,
+    .org-table td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: center;
+      vertical-align: middle;
+    }
 
-.org-table th {
-  background-color: #000 !important;  /* hitam */
-  color: #fff !important;             /* teks putih */
-  font-weight: 600;
-}
+    .org-table th {
+      background-color: #000;
+      color: #fff;
+      font-weight: 600;
+    }
 
-/* Jika kamu tetap ingin menggunakan kelas Bootstrap table-dark,
-   tambahkan aturan berikut agar tidak tertimpa: */
-.table-dark th {
-  background-color: #000 !important;
-  color: #fff !important;
-}
+    .org-table img {
+      width: 80px;
+      height: auto;
+      object-fit: contain;
+    }
 
-
-/* Gaya gambar logo */
-.org-table img {
-  width: 80px;
-  height: auto;
-  object-fit: contain;
-}
-
-/* Buat jarak bawah pada container */
-.container-fluid {
-  padding-bottom: 20px;
-}
-
-/* MEDIA QUERIES untuk tampilan pada layar sempit (< 768px) */
-@media screen and (max-width: 768px) {
-  .org-table th,
-  .org-table td {
-    padding: 10px 6px;
-    font-size: 14px;
-  }
-  .org-table img {
-    width: 60px;
-  }
-}
-
-/* MEDIA QUERIES untuk layar sangat sempit (< 480px) */
-@media screen and (max-width: 480px) {
-  .org-table th,
-  .org-table td {
-    padding: 8px 4px;
-    font-size: 12px;
-  }
-  .org-table img {
-    width: 50px;
-  }  .footer {
+    /* Footer */
+    .footer {
       text-align: center;
       padding: 16px 0;
       background-color: #222;
       color: #fff;
-      margin-top: 60px
-  }
-    </style>
-  <!-- Awali atau gantikan bagian tabel Anda dengan: -->
-<div class="table-responsive mt-3" data-aos="fade-up">
-  <table class="table table-bordered table-striped org-table">
-    <thead class="table-dark">
-      <tr>
-        <th scope="col">No</th>
-        <th scope="col">Logo</th>
-        <th scope="col">Ketua</th>
-        <th scope="col">Name</th>
-      </tr>
-    </thead>
-   <tbody>
-  <tr>
-    <th scope="row">1</th>
-    <td><img src="assets/pk.png" width="100" height="50" alt="pk"></td>
-    <td>Faiz naufal Firdaus</td>
-    <td>Perwakilan Kelas</td>
-  </tr>
-  <tr>
-    <th scope="row">2</th>
-    <td><img src="assets/osis.jpeg" width="100" height="50" alt="osis"></td>
-    <td>Najril apriza firmansyah</td>
-    <td>Osis</td>
-  </tr>
-  <tr>
-    <th scope="row">3</th>
-    <td><img src="assets/sklnb.jpg" width="100" height="50" alt="sklnb"></td>
-    <td>M.Alfibian Ghifari</td>
-    <td>Sklnb</td>
-  </tr>
-  <tr>
-    <th scope="row">4</th>
-    <td><img src="assets/ssg.png" width="100" height="50" alt="ssg"></td>
-    <!-- Di sini sebelumnya <td>Muhamad Naufal Hanif<td> -->
-    <td>Muhamad Naufal Hanif</td>
-    <td>Sanggar Seni Gerentes</td>
-  </tr>
-  <tr>
-    <th scope="row">5</th>
-    <td><img src="assets/passatas.jpg" width="100" height="50" alt="passatas"></td>
-    <!-- Di sini sebelumnya <td>Muhamad Daffa Aprilia<td> -->
-    <td>Muhamad Daffa Aprilia</td>
-    <td>Paskibra</td>
-  </tr>
-  <tr>
-    <th scope="row">6</th>
-    <td><img src="assets/gema.jpg" width="100" height="50" alt="gema"></td>
-    <!-- Di sini sebelumnya <td>Bagas Mohga Firjatullah<td> -->
-    <td>Bagas Mohga Firjatullah</td>
-    <td>Gema Babusalam</td>
-  </tr>
-  <tr>
-    <th scope="row">7</th>
-    <td><img src="assets/PHIPETALA.jpg" width="100" height="50" alt="phipetala"></td>
-    <!-- Di sini sebelumnya <td>Farras Muhammad Prayata Yanwarsyah<td> -->
-    <td>Farras Muhammad Prayata Yanwarsyah</td>
-    <td>Phipetala</td>
-  </tr>
-  <tr>
-    <th scope="row">8</th>
-    <td><img src="assets/konasis.jpg" width="100" height="50" alt="konasis"></td>
-    <!-- Di sini sebelumnya <td>fuji ferdiansyah<td> -->
-    <td>Fuji Ferdiansyah</td>
-    <td>Koperasi Bina Siswa</td>
-  </tr>
-  <tr>
-    <th scope="row">9</th>
-    <td><img src="assets/EDS.JPG" width="100" height="50" alt="EDS"></td>
-    <!-- Di sini sempat lupa menutup <td> untuk Dian Andika Pagestu -->
-    <td>Dian Andika Pagestu</td>
-    <td>Esperanto de Satas</td>
-  </tr>
-  <tr>
-    <th scope="row">10</th>
-    <td><img src="assets/napel.jpg" width="100" height="50" alt="napel"></td>
-    <!-- Di sini sebelumnya <td>Elmira Ishra Fariza<td> -->
-    <td>Elmira Ishra Fariza</td>
-    <td>Buana Pelajar</td>
-  </tr>
-  <tr>
-    <th scope="row">11</th>
-    <td><img src="assets/pks.png" width="100" height="50" alt="pks"></td>
-    <!-- Di sini sebelumnya <td>Jelita Ely Fitri Sinaga<td> -->
-    <td>Jelita Ely Fitri Sinaga</td>
-    <td>Patroli Keamanan Sekolah</td>
-  </tr>
-  <tr>
-    <th scope="row">12</th>
-    <td><img src="assets/logo fiks micro.png" width="100" height="50" alt="micro"></td>
-    <!-- Di sini sebelumnya <td>Darin Ayu Surya Faazani<td> -->
-    <td>Darin Ayu Surya Faazani</td>
-    <td>Micro</td>
-  </tr>
-  <tr>
-    <th scope="row">13</th>
-    <td><img src="assets/pik r.jpg" width="100" height="50" alt="pik r"></td>
-    <!-- Di sini sebelumnya <td>Nailah Ramadhani Shabirah<Td> -->
-    <td>Nailah Ramadhani Shabirah</td>
-    <td>Pik R</td>
-  </tr>
-  <tr>
-    <th scope="row">14</th>
-    <td><img src="assets/taksis.png" class="img-fluid" width="80" alt="taksis"></td>
-    <!-- Di sini sebelumnya <td>Nadhira Nurul Ulfah<td> -->
-    <td>Nadhira Nurul Ulfah</td>
-    <td>Taman Kajian Siswa</td>
-  </tr>
-  <tr>
-    <th scope="row">15</th>
-    <td><img src="assets/logo pmr.jpg" width="100" height="50" alt="pmr"></td>
-    <!-- Di sini sebelumnya <td>Derbi Malik Mulki Ariyadi Putra<td> -->
-    <td>Derbi Malik Mulki Ariyadi Putra</td>
-    <td>PMR</td>
-  </tr>
-  <tr>
-    <th scope="row">16</th>
-    <td><img src="assets/Logo sampurasun.png" width="100" height="50" alt="sampurasun"></td>
-    <!-- Di sini sebelumnya <td>Najril apriza firmansyah<td> -->
-    <td>Najril apriza firmansyah</td>
-    <td>Sampurasun</td>
-  </tr>
-</tbody>
+      margin-top: 40px;
+    }
 
-  </table>
-</div>
+    /* Media queries */
+    @media screen and (max-width: 768px) {
+      .org-table th,
+      .org-table td {
+        padding: 10px;
+        font-size: 14px;
+      }
+      .org-table img {
+        width: 60px;
+      }
+    }
 
-  
+    @media screen and (max-width: 480px) {
+      .org-table th,
+      .org-table td {
+        padding: 8px;
+        font-size: 12px;
+      }
+      .org-table img {
+        width: 50px;
+      }
+    }
+  </style>
+</head>
+<body data-aos="fade-up">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        SMAN 1 TASIKMALAYA
+        <img src="assets/Logo_SMAN_1_Tasikmalaya.png" width="30" height="30" alt="Logo SMAN 1 Tasikmalaya" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="History/index.html">HISTORY</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              OTHERS
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="TEACHER/index.html">TEACHER</a></li>
+              <li><a class="dropdown-item" href="INFRASTRUCTURE/index.html">INFRASTRUCTURE</a></li>
+              <li><a class="dropdown-item" href="ORGANIZATION/index.html">ORGANIZATION</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Tabel Organisasi -->
+  <div class="table-responsive" data-aos="fade-up">
+    <table class="table org-table">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Logo</th>
+          <th>Ketua</th>
+          <th>Nama Organisasi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Contoh Baris 1 -->
+        <tr>
+          <th scope="row">1</th>
+          <td><img src="assets/pk.png" alt="PK Logo" /></td>
+          <td>Faiz Naufal Firdaus</td>
+          <td>Perwakilan Kelas</td>
+        </tr>
+        <!-- Tambahkan baris lain sesuai data -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer" data-aos="fade-up">
+    Dibuat oleh Kelompok 9 Kelas XI-9 SMAN 1 Tasikmalaya | 5 Juni 2025
+  </footer>
+
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-  crossorigin="anonymous"></script>
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+  </script>
   <script>
     AOS.init();
   </script>
-    <!-- Letakkan tepat sebelum penutup </body> di file HTML kamu -->
-  <footer class="footer">
-    Dibuat oleh Kelompok 9 Kelas XI-9 SMAN 1 Tasikmalaya | 5 Juni 2025
-  </footer>
- 
-  </div>
 </body>
-
 </html>
